@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 15px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<h1>Register Here</h1>
+<p th:text="${msg}"></p>
+<form th:action="@{/register}" th:object="${counsellor}" method="post">
+    <table>
+    <tr>
+        <td>Name:</td>
+        <td><input type="text" th:field="*{name}" required/></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><input type="text" th:field="*{email}" required/></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="text" th:field="*{pwd}" required/></td>
+    </tr>
+    <tr>
+        <td>PhoneNO:</td>
+        <td><input type="text" th:field="*{phone}" /></td>
+    </tr>
+
+    </table>
+    <button type="submit" class="btn-primary">Register</button>
+</form>
+
+<a href="/">Login Here</a>
+</body>
+</html>

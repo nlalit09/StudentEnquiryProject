@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to Dashboard</h1>
+<table>
+    <tr>
+        <td>Total Enquires : </td>
+        <td th:text="${dashboard.totalEnq}"></td>
+    </tr>
+    <tr>
+        <td>Enrolled Enquires : </td>
+        <td th:text="${dashboard.enrolledEnq}"></td>
+    </tr>
+    <tr>
+        <td>Lost Enquires : </td>
+        <td th:text="${dashboard.lostEnq}"></td>
+    </tr>
+
+</table>
+
+<a href="enquiry">Add Enquiry</a>
+<a href="delete">Delete Enquiry</a>
+
+<a href="/"><button class="btn danger">Logout</button></a>
+</body>
+</html>
